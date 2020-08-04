@@ -1,0 +1,69 @@
+:root{
+    /* Variáveis no CSS */
+    --color-background: #F0F0F7;
+    --color-primary-lighter: #9871F5;
+    --color-primary-light: #916BEA;
+    --color-primary: #8257E5;
+    --color-primary-dark: #774DD6;
+    --color-primary-darker: #6842C2;
+    --color-secondary: #04D361;
+    --color-secondary-dark: #04BF58;
+    --color-title-in-primary: #FFFFFF;
+    --color-text-in-primary: #D4C2FF;
+    --color-text-title: #32264D;
+    --color-text-complement: #9C98A6;
+    --color-text-base: #6A6180;
+    --color-line-in-white: #E6E6F0;
+    --color-input-background: #F8F8FC;
+    --color-button-text: #FFFFFF;
+    --color-box-base: #FFFFFF;
+    --color--box-footer: #FAFAFC;
+    --color-small-info: #C1BCCC;
+
+    /* Tamanho da fonte padrão: 16px - 100% - 1rem */
+
+    /* REM = Root EleMent */
+    /* O rem e a procentagem dependem diretamente da medida usada no :root, ou seja, eles usam a medida no root como base para definir a escala padrão da fonte. */
+
+    /* PORCENTAGEM / EM = EleMent */
+    /*
+    Ainda falando de porcentagem, ela respeita o elemento pai, ou seja, se o elemento :root tiver um "font-size: 100%", ao definir "font-size: 50%" no body, por exemplo, ele irá tomar como base o valor inserido no :root (100%) e se esse boddy possuir um h1 e definirmos "font-size: 50%" para este h1, ele irá tomar como base o valor inserido no body (50%), logo, ele teria 50% do 100% do body, que por sua vez é o 100% do :root
+    
+    Resumidamente: Ele é relativo ao que está acima dele
+    
+    Esta definição vale tanto para a procentagem quanto para o EM
+    */
+
+    font-size: 60%; /* Controle das medidas REM */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh; /* Viewport Height (VH) = medida que leva em consideração a tela inteira do documento */
+}
+
+body {
+    background: var(--color-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body,
+input,
+button,
+textarea {
+    font: 500 1.6rem Poppins;
+    color: var(--color-text-base);
+}
+
+#container {
+    width: 90vw; /* ViewPort Wdith (VW) = medida que leva em consideração a tela inteira do documento */
+    max-width: 700px;
+}
