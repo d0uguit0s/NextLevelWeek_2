@@ -1,2 +1,2 @@
 # NextLevelWeek_2
- Seamana de aprendizado do React e React Native em um evento da Rocketseat.
+ Semana de aprendizado de React e React Native em um evento da Rocketseat.

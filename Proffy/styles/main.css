@@ -67,3 +67,10 @@ textarea {
     width: 90vw; /* ViewPort Wdith (VW) = medida que leva em consideração a tela inteira do documento */
     max-width: 700px;
 }
+
+@media (min-width: 700px) {
+    /* Mudando a referência para o tamanho da fonte */
+    :root {
+        font-size: 62.5%;
+    }
+}
