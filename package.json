@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/douglassilvaa/NextLevelWeek_2/issues"
   },
-  "homepage": "https://github.com/douglassilvaa/NextLevelWeek_2#readme"
+  "homepage": "https://github.com/douglassilvaa/NextLevelWeek_2#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
