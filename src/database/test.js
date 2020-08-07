@@ -32,5 +32,29 @@ dataBase.then(async (db) => {
 
     await createProffy(db, {proffyValue, classValue, classScheduleValues})
 
+
     // Consultar os dados inseridos
+
+    // Todos os Proffys
+    const selectedProffys = await db.all("SELECT * FROM proffy")
+    // console.log(selectedProffys)
+
+    // Consultar as classes de um determinado professor e trazer junto, os dados do professor
+    const selectClassesAndProffys = await db.all(`
+        SELECT class.*, proffy.* FROM proffy
+        JOIN class ON (class.proffy_id = proffy.id)
+        WHERE class.proffy_id = 1;
+    `)
+    //console.log(selectClassesAndProffys)
+
+    // Consultar o horário
+    const selectClassesSchedules = await db.all(`
+        SELECT class_schedule.* FROM class_schedule
+        WHERE class_schedule.class_id = 1
+        AND class_schedule.weekday = 0
+        AND class_schedule.time_from <= 520
+        AND class_schedule.time_to > 520
+    `)
+
+    // console.log(selectClassesSchedules)
 })
